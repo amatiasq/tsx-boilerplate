@@ -1,0 +1,68 @@
+{
+  "name": "tsx-boilerplate",
+  "version": "0.1.0",
+  "description": "Boilerplate for projects using React and Typescript",
+  "main": "src/index.tsx",
+  "directories": {
+    "test": "test"
+  },
+  "jest": {
+    "mapCoverage": true,
+    "moduleFileExtensions": [
+      "tsx",
+      "jsx",
+      "ts",
+      "js"
+    ],
+    "testRegex": "\\.spec\\.tsx?$",
+    "testPathIgnorePatterns": [
+      ".bakup"
+    ],
+    "transform": {
+      "\\.tsx?$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    }
+  },
+  "scripts": {
+    "start": "webpack-dev-server",
+    "build": "webpack --config ./webpack.config.js",
+    "test": "jest",
+    "test-watch": "jest --watch",
+    "test-coverage": "jest --coverage",
+    "upload-coverage": "cat ./coverage/lcov.info | coveralls",
+    "lint": "tslint -c tslint.json --type-check --project tsconfig.json 'src/**/*.ts' 'src/**/*.tsx'",
+    "lint-fix": "tslint -c tslint.json --type-check --project tsconfig.json --fix 'src/**/*.ts' 'src/**/*.tsx'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amatiasq/tsx-boilerplate.git"
+  },
+  "author": "A. Matías Quezada <amatiasq@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/amatiasq/tsx-boilerplate/issues"
+  },
+  "devDependencies": {
+    "@types/jest": "^20.0.2",
+    "@types/react": "^15.0.37",
+    "@types/react-dom": "^15.5.1",
+    "coveralls": "^2.13.1",
+    "css-loader": "^0.28.4",
+    "jest": "^20.0.4",
+    "node-sass": "^4.5.3",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.18.2",
+    "ts-jest": "^20.0.7",
+    "ts-loader": "^2.2.2",
+    "tslint": "^5.5.0",
+    "tslint-language-service": "^0.9.6",
+    "typescript": "^2.4.1",
+    "webpack": "^3.1.0",
+    "webpack-dev-server": "^2.5.1"
+  },
+  "homepage": "https://github.com/amatiasq/tsx-boilerplate#readme",
+  "dependencies": {
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "tslib": "^1.7.1"
+  }
+}

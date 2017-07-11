@@ -1,0 +1,25 @@
+{
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx"
+  ],
+
+  "exclude": [ "node_modules" ],
+
+  "compilerOptions": {
+    "experimentalDecorators": true,
+    "alwaysStrict": true,
+    "declaration": true,
+    "forceConsistentCasingInFileNames": true,
+    "importHelpers": true,
+    "sourceMap": true,
+    "stripInternal": true,
+
+    "module": "commonjs",
+    "target": "es6",
+    "jsx": "react",
+    "plugins": [
+      { "name": "tslint-language-service" }
+    ]
+  }
+}
